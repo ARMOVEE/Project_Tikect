@@ -25,33 +25,33 @@ $active = $active ?? null;
 <body>
 <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-<header class="topnav">
-  <div class="topnav-row">
-    <a class="logo" href="index.php">NOVA <span>LIVE</span></a>
+<header class="topnav" id="topNav">
+  <div class="topnav-row" id="topNavRow">
+    <a class="logo" href="index.php" title="NOVA LIVE">NOVA <span>LIVE</span></a>
     <div class="nav-cat">
-      <button class="nav-cat-btn" id="navCatBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="navCatMenu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/></svg><span data-i18n="Kategori">Kategori</span>
+      <button class="nav-cat-btn" id="navCatBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="navCatMenu" title="Kategori Event">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/></svg><span class="nav-text" data-i18n="Kategori">Kategori</span>
       </button>
       <div class="nav-cat-menu" id="navCatMenu" role="menu"></div>
     </div>
     <form class="nav-search" id="navSearch" role="search">
       <input id="navQ" type="search" placeholder="Cari event, artis, atau kota…" aria-label="Cari event, artis, atau kota">
-      <button type="submit" aria-label="Cari"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button type="submit" aria-label="Cari" class="nav-search-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </form>
-    <a class="nav-partner" href="info.php#buat-event">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z" fill="currentColor"/></svg><span data-i18n="Bikin Eventmu">Bikin Eventmu</span>
+    <a class="nav-partner" href="info.php#buat-event" title="Bikin Eventmu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z" fill="currentColor"/></svg><span class="nav-text" data-i18n="Bikin Eventmu">Bikin Eventmu</span>
     </a>
     <div class="nav-lang">
-      <button class="nav-lang-btn" id="navLangBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="navLangMenu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z" stroke="currentColor" stroke-width="2"/></svg><span id="navLangLabel">ID</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <button class="nav-lang-btn" id="navLangBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="navLangMenu" title="Pilih Bahasa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z" stroke="currentColor" stroke-width="2"/></svg><span id="navLangLabel" class="nav-text">ID</span><svg class="nav-lang-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
       <div class="nav-lang-menu" id="navLangMenu" role="menu">
         <button type="button" data-lang="id" class="active" aria-pressed="true">Indonesia (ID)</button>
         <button type="button" data-lang="en" aria-pressed="false">English (EN)</button>
       </div>
     </div>
-    <a class="nav-account" href="#" data-open-login>
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span data-i18n="Masuk">Masuk</span>
+    <a class="nav-account" href="#" data-open-login title="Masuk">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="nav-text" data-i18n="Masuk">Masuk</span>
     </a>
     <button class="burger" id="burgerBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="drawer">☰</button>
   </div>

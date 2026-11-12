@@ -2,10 +2,12 @@
 (function () {
   "use strict";
 
-  /* Header shadow saat scroll */
-  var header = document.querySelector(".site-header");
+  /* Header shadow & floating pill shrink saat scroll */
+  var header = document.querySelector(".topnav, .site-header");
   function onScroll() {
-    if (header) header.classList.toggle("scrolled", window.scrollY > 8);
+    if (header) {
+      header.classList.toggle("scrolled", window.scrollY > 30);
+    }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -151,9 +153,20 @@
   });
   // pencarian navbar -> halaman jelajah
   var navSearch = document.getElementById("navSearch");
-  if (navSearch) navSearch.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var q = document.getElementById("navQ").value.trim();
-    window.location.href = "explore.php" + (q ? "?q=" + encodeURIComponent(q) : "");
-  });
+  var navQ = document.getElementById("navQ");
+  if (navSearch && navQ) {
+    navSearch.addEventListener("submit", function (e) {
+      var topnav = document.querySelector(".topnav");
+      var isScrolled = topnav && topnav.classList.contains("scrolled");
+      var q = navQ.value.trim();
+      // Jika dalam mode scrolled dan input masih kosong serta belum fokus, fokuskan input agar navbar melebar
+      if (isScrolled && !q && document.activeElement !== navQ) {
+        e.preventDefault();
+        navQ.focus();
+        return;
+      }
+      e.preventDefault();
+      window.location.href = "explore.php" + (q ? "?q=" + encodeURIComponent(q) : "");
+    });
+  }
 })();
