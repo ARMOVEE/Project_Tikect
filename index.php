@@ -10,19 +10,19 @@ include 'inc/header.php';
   <div class="video-viewport">
     <div class="video-track" id="videoTrack">
       <div class="video-slide active">
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/stage-sax.webp" aria-label="Video konser jazz">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/midnight.jpeg" aria-label="Video konser jazz">
           <source src="assets/hero-video.mp4" type="video/mp4">
         </video>
         <span class="video-slide-badge">Midnight Jazz Session Vol. 4</span>
       </div>
       <div class="video-slide">
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/stage-trio.webp" aria-label="Video sesi akustik">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/nadin.jpeg" aria-label="Video sesi akustik">
           <source src="assets/hero-video-2.mp4" type="video/mp4">
         </video>
         <span class="video-slide-badge">Nadin Amizah: Intimate Acoustic</span>
       </div>
       <div class="video-slide">
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/stage-vocal.webp" aria-label="Video konser pop">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/tulus1.jpeg" aria-label="Video konser pop">
           <source src="assets/hero-video-3.mp4" type="video/mp4">
         </video>
         <span class="video-slide-badge">Tulus Live in Concert 2026</span>
