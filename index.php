@@ -2,7 +2,7 @@
 $pageTitle = 'NOVA LIVE — Tiket Event Terpercaya, dalam Satu Tempat';
 $pageDesc = 'NOVA LIVE: platform tiket event Indonesia. Konser, pameran, wahana, dan olahraga. Beli tiket mudah, harga transparan, tiket gelang, dan validasi cepat.';
 $active = 'beranda';
-include 'inc/header.php';
+include __DIR__ . '/app/layouts/header.php';
 ?>
 <main id="main">
   <!-- 1. HERO VIDEO -->
@@ -108,7 +108,7 @@ include 'inc/header.php';
     </div>
   </section>
 </main>
-<?php include 'inc/footer.php'; ?>
+<?php include __DIR__ . '/app/layouts/footer.php'; ?>
 <script src="js/home.js"></script>
 <script src="js/hero-video.js"></script>
 </body>
